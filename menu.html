@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- https://preview.hasthemes.com/panshi/index.html -->
+
+    <!-- font awesome file -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- ---bootstrap file----->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- owlcarousel file -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!----------fancy box------------------>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- media css file -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ------------------head---------------------------- */
+        .header {
+            position: absolute;
+            margin: 30px 0px 20px 0px;
+            z-index: 999999;
+            width: 100%;
+        }
+
+        .fixed_header {
+            position: fixed;
+            top: -30px;
+            left: 0;
+            padding: 0;
+            background-color: var(--black);
+            color: var(--white);
+            transition: .1s all ease-in-out;
+            width: 100%;
+            z-index: 999;
+            animation: effect_header 0.4s;
+            background: rgba(0, 0, 0, 0.68) none repeat scroll 0 0;
+        }
+
+        .banner-breadcrumb ul li {
+            display: inline-block;
+            text-transform: capitalize;
+            font-family: 'Playball', cursive;
+            font-size: 18px;
+            color: #fff;
+            transition: all 0.5s ease 0s;
+        }
+
+
+        /* --------------section 1---------------------------- */
+        .hero {
+            background: url('./assets/service.jpg') no-repeat center;
+            background-size: cover;
+            object-fit: cover;
+            padding: 105px 0px;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero::before {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .hero-text {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .hero-text h2 {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 90px;
+            text-transform: uppercase;
+        }
+
+        .banner-breadcrumb ul li i {
+            padding: 0 10px;
+            font-size: 12px;
+        }
+
+        /* --------------------service------------------------------------ */
+        .uniq {
+            margin-top: 130px;
+        }
+
+        .serve-img .bg2-img {
+            margin: 20px;
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .serve-img {
+            box-shadow: 0 0 4px 4px #ececec;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            margin-right: 45px;
+
+        }
+
+        .about-info {
+            padding: 0px 0px;
+        }
+
+        
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* -------------------------------------media query start---------------------------------------------- */
+        @media (max-width: 767px) {
+            .container {
+                width: 300px;
+                margin: auto;
+            }
+
+            .header {
+                position: absolute;
+                margin: 0px 0px 20px 0px;
+                z-index: 999999;
+                width: 100%;
+            }
+
+            /* ---------------------services------------------------- */
+            .serve-img {
+                box-shadow: 0 0 4px 4px #ececec;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                margin-right: 45px;
+                width: 100%;
+            }
+
+            .bg2-img img {
+                width: 100%;
+            }
+
+            .about-info {
+                padding: 25px 15px;
+                margin-left: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 480px) and (max-width: 767px) {
+            .container {
+                width: 450px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .container {
+                max-width: 750px;
+            }
+
+            
+
+            /* -----------------------services--------------------------- */
+            .serve-img {
+                box-shadow: 0 0 4px 4px #ececec;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                margin-right: 45px;
+                width: 100%;
+            }
+
+            .bg2-img img {
+                width: 100%;
+            }
+
+            .about-info {
+                padding: 55px 15px 0px;
+                margin-left: 10px;
+            }
+
+           
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1169px) {
+            .container {
+                max-width: 970px;
+            }
+            /* ------------------services------------------------------- */
+            .bg2-img img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ------------------sticky top----------------------------- -->
+    <div class="sticky_top">
+        <i class="fa-solid fa-caret-up"></i>
+    </div>
+    <!-- ------------------header------------------------------ -->
+    <div class="header">
+        <div class="container">
+            <div class="row justify-content-between align-items-center ">
+                <div class="col-auto col-md-auto">
+                    <div class="logo d-lg-block d-md-block d-sm-none  d-none">
+                        <a href="index.html"><img src="assets/asset 0.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="nav col-lg-auto col-md-auto">
+                    <ul class="main_menu d-flex align-items-center mb-0 ps-md-0">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="usefulinfo.html">Usefulinfo</a></li>
+                        <li><a href="blog.html">Blog</a>
+                            <ul class="submenu">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-detail.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="pe-0">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="head p-0">
+                    <div class="d-flex d-lg-none d-md-none justify-content-between align-items-center"
+                        style="padding-bottom: 15px; padding-top: 25px;">
+                        <div class="logo d-lg-none d-md-none">
+                            <a href="index.html"><img src="assets/asset 0.png" alt=""></a>
+                        </div>
+                        <div class="toggle_icon d-lg-none d-md-none">
+                            <i class="fa-solid fa-bars bar"></i>
+                        </div>
+                    </div>
+                    <ul class="mob_main_menu d-lg-none d-md-none mb-0">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="usefulinfo.html">Usefulinfo</a></li>
+                        <li><a href="blog.html" class="d-flex justify-content-between pe-0 py-0">
+                                <div style="line-height:35px;"> Blog </div>
+                                <i class="fa-solid fa-plus flot-right"></i>
+                            </a>
+                            <ul class="mob_submenu">
+                                <li><a href="blog.html">Blog </a></li>
+                                <li><a href="blog-detail.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="pe-0">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------section 1------------------------------------------->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero-text">
+                        <h2>MENU</h2>
+                        <div class="banner-breadcrumb">
+                            <ul class="ps-0">
+                                <li><a href="index.html">home </a> <i class="fa-solid fa-angle-right"></i></li>
+                                <li>Menu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------------services------------------------------------------- -->
+    <section class="uniq">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="serve-img">
+                        <div class="bg2-img">
+                            <a href="#"><img src="assets/about.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 p-0 services">
+                    <div class="about-info">
+                        <h2>Panshi The Best<br>
+                            Catering Service in the City </h2>
+                        <h4>The best food make you feel good!</h4>
+                        <p>Panshi the best theme for elit, sed do eiusmod tempor dolor sit amet,
+                            conse ctetur adiog elit, sed do eiusmod tempor incididunt ut labore et
+                            lorna iquatd minimam, is nostrud iono oris nisi ut aliquip ex ea On the
+                            other hand, we denounce with righteous indignation.
+                        </p>
+                        <a href="contact.html" class="default-btn1 text-center"><span>order now</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------section 4 menu------------------------------------- -->
+    <section class="menu">
+        <div class="container">
+            <div class="sec-tittle text-center">
+                <h2>Choose your menu</h2>
+            </div>
+            <div class="d-flex pack">
+                <div class="butt">
+                    <a href="#!" class="act" id="view">Package</a>
+                    <a href="#!" class="act" id="view2">Banquet</a>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme" id="slider2">
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"> # 1</span>
+                    </div>
+
+                    <div class="tables">
+                        <ul>
+                            <li>Plain Rice <span>$10</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"> # 2</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Morog Polaw <span>$30</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 3</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Sea Food Rice <span>$50</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 1</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Plain Rice <span>$10</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 2</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Morog Polaw <span>$30</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 3</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Sea Food Rice <span>$50</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 1</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Plain Rice <span>$10</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 2</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Morog Polaw <span>$30</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="package_box">
+                    <div class="text-center">
+                        <span class="demo">Package </span>
+                        <span class="demo2"># 3</span>
+                    </div>
+                    <div class="tables">
+                        <ul>
+                            <li>Sea Food Rice <span>$50</span></li>
+                            <li>Vegitable <span>$05</span></li>
+                            <li>Chicken Suslick <span>$08</span></li>
+                            <li>Chicken Roast <span>$08</span></li>
+                            <li>Mutton Rejala <span>$10</span></li>
+                            <li>Shahi Jorda <span>$06</span></li>
+                            <li>Soft Drinks <span>$04</span></li>
+                            <li>Pan <span>$02</span></li>
+                        </ul>
+                        <div class="text-center">
+                            <h4 class="text-center">Per Person <span>$53</span></h4>
+                            <a href="contact.html" class="default-btn1" style="margin-top:28px ;"><span>order
+                                    now</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <!-- --------------------------section 8 subscribe---------------------------------- -->
+    <section class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div
+                    class="col-lg-8 col-lg-offset-8 col-md-12 col-md-offset-2 col-sm-12 col-sm-offset-1 col-xs-12 sub-under">
+                    <div class="subscribe-content text-center">
+                        <h2>Subscribe our Newsletter for Latest Offer</h2>
+                        <p>To Get Latest Update tempor dolor sit amet, conse ctetur adipiscing elit </p>
+                    </div>
+                    <div class="subscribe-form">
+                        <div id="mc_embed_signup">
+                            <form
+                                action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                class="validate" target="_blank" novalidate="">
+                                <div id="mc_embed_signup_scroll" class="mc-form">
+                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                        placeholder="Email" data-bs-trigger="focus" data-bs-toggle="popover"
+                                        data-bs-content="And here's some amazing content.">
+                                    <div class="mc-news" aria-hidden="true"><input type="text" name="" tabindex="-1"
+                                            value=""></div>
+                                    <button type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                        class="default-btn" style="width:auto;">
+                                        <span>subscribe</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------------------footer--------------------------------------- -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 hidden-sm hidden-xs ">
+                    <p class="address">Address : 256 AVE, Manchester, 125, North England</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
+                    <p class="copy">Copyright
+                        <i class="fa fa-copyright"></i>
+                        2017 <a href="https://devitems.com/" target="_blank">Devitems LLC</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            // ---------------------mob menu----------------------------------
+            $('.mob_main_menu , .mob_submenu').hide()
+
+            $('.toggle_icon').click(function () {
+                $('.mob_main_menu').slideToggle()
+                $(this).find('i').toggleClass('fa-bars fa-times')
+            })
+            $('.mob_main_menu > li > a i').click(function (event) {
+                 event.preventDefault();
+                 event.stopPropagation(); 
+                 $(this).toggleClass('fa-plus fa-minus');
+                 $(this).parent().next('.mob_submenu').slideToggle();
+                
+            });
+
+            // ---------------fix header-------------------------
+            $(window).scroll(function () {
+                var h = $(window).scrollTop()
+
+                if (h > 40) {
+                    $('.header').addClass('fixed_header')
+                } else {
+                    $('.header').removeClass('fixed_header')
+                }
+                if (h > 150) {
+                    $('.sticky_top').fadeIn(350)
+                }
+                else {
+
+                    $('.sticky_top').fadeOut(350)
+                }
+            })
+            $('.sticky_top').hide()
+            //click to out top//------------------------
+            $('.sticky_top').click(function () {
+                $('html , body').animate({ scrollTop: 0 }, 1000);
+            })
+
+            // -------------------sec 4 menu--------------------------
+            $('#view').first().addClass('acti');
+
+            $('.act').click(function () {
+                $('.act').removeClass('acti');
+                $(this).addClass('acti');
+            });
+            //  --------------sec 4 menu-------------------------------
+            $('#view2').click(function () {
+                $('.demo').html('<span>Banquet  <span>')
+            })
+            $('#view').click(function () {
+                $('.demo').html('<span>package  <span>')
+            })
+         
+            $("#slider2").owlCarousel({
+                items: 3,
+                loop: true,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+
+                    },
+                    1000: {
+                        items: 3,
+                    }
+                }
+
+            })
+
+        });
+
+
+        
+
+
+    </script>
+</body>
+
+</html>
